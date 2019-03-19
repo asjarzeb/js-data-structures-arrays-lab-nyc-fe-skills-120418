@@ -24,13 +24,13 @@ function appendDriver (name) {
 }
 
 function prependDriver (name) {
-  let driversCopy = drivers.unshift()
-  driversCopy.push(name)
+  let driversCopy = drivers.slice()
+  driversCopy.unshift(name)
   return driversCopy
 }
 
 function removeLastDriver (name) {
-  let driversCopy = drivers.pop()
-  driversCopy.push(name)
+  let driversCopy = drivers.slice()
+  driversCopy.pop(name)
   return driversCopy
 }
